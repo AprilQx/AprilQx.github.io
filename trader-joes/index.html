@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trader Joe's NYC Location Analysis</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 1px solid #eaeaea;
+            padding-bottom: 20px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #800000; /* Trader Joe's red */
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            margin-bottom: 20px;
+        }
+        
+        .project-section {
+            margin-bottom: 40px;
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            color: #2c3e50;
+            border-bottom: 1px solid #eaeaea;
+            padding-bottom: 10px;
+        }
+        
+        .visualizations {
+            margin-top: 30px;
+        }
+        
+        .visualization-card {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .visualization-title {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .visualization-description {
+            margin-bottom: 15px;
+        }
+        
+        .nav-links {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+        
+        .nav-link {
+            padding: 8px 16px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            background-color: #2980b9;
+        }
+        
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            padding: 20px;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            border-top: 1px solid #eaeaea;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Trader Joe's NYC Location Analysis</h1>
+        <div class="subtitle">Identifying Optimal Locations for New Stores</div>
+    </header>
+    
+    <div class="project-section">
+        <h2>Overview</h2>
+        <p>
+            This data science project identifies the best locations for Trader Joe's to open new stores in New York City. 
+            The analysis combines demographic data, transit accessibility, and retail competition to score potential 
+            locations across the five boroughs.
+        </p>
+        
+        <p>
+            The recommendation is based on similarity scores calculated from multiple factors including population 
+            density, competition from other grocery chains, transit accessibility, educational attainment, and income levels.
+        </p>
+    </div>
+    
+    <div class="project-section">
+        <h2>Key Findings</h2>
+        <ul>
+            <li>Trader Joe's locations strongly correlate with transit accessibility</li>
+            <li>Stores cluster in areas with high education levels and medium-high population density</li>
+            <li>Several underserved areas match the demographic profile of successful existing locations</li>
+            <li>ZIP code 10038 in Manhattan (Two Bridges) emerged as a top recommendation</li>
+        </ul>
+    </div>
+    
+    <div class="project-section">
+        <h2>Visualizations</h2>
+        <div class="visualizations">
+            <div class="visualization-card">
+                <h3 class="visualization-title">Interactive NYC Map</h3>
+                <p class="visualization-description">
+                    Explore the interactive map showing existing Trader Joe's locations, recommended areas for expansion,
+                    and key demographic metrics by ZIP code.
+                </p>
+                <a href="nyc_retail_plotly_map.html" class="nav-link">View Interactive Map</a>
+            </div>
+            
+            <!-- Add more visualization cards as needed -->
+        </div>
+    </div>
+    
+    <div class="nav-links">
+        <a href="../" class="nav-link">← Back to Portfolio</a>
+    </div>
+    
+    <footer>
+        &copy; 2025 AprilQx. All rights reserved.
+    </footer>
+</body>
+</html>
