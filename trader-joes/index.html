@@ -50,14 +50,19 @@
         
         .visualizations {
             margin-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 20px;
         }
         
         .visualization-card {
             background-color: #f8f9fa;
             border-radius: 8px;
             padding: 20px;
-            margin-bottom: 20px;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
         }
         
         .visualization-title {
@@ -68,6 +73,7 @@
         
         .visualization-description {
             margin-bottom: 15px;
+            flex-grow: 1;
         }
         
         .nav-links {
@@ -84,10 +90,26 @@
             border-radius: 4px;
             font-weight: 500;
             transition: background-color 0.3s ease;
+            text-align: center;
         }
         
         .nav-link:hover {
             background-color: #2980b9;
+        }
+        
+        .map-categories {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .map-category {
+            background-color: #eaeaea;
+            border-radius: 20px;
+            padding: 5px 15px;
+            font-size: 0.9rem;
+            color: #555;
         }
         
         footer {
@@ -131,18 +153,112 @@
     </div>
     
     <div class="project-section">
-        <h2>Visualizations</h2>
+        <h2>Interactive Visualizations</h2>
+        <p>
+            Explore the different visualizations below to understand the analysis and recommendations:
+        </p>
+        
         <div class="visualizations">
             <div class="visualization-card">
-                <h3 class="visualization-title">Interactive NYC Map</h3>
+                <h3 class="visualization-title">Featured Analysis Map</h3>
                 <p class="visualization-description">
-                    Explore the interactive map showing existing Trader Joe's locations, recommended areas for expansion,
-                    and key demographic metrics by ZIP code.
+                    Our primary visualization showing the comprehensive analysis results, including 
+                    recommended locations and key metrics.
                 </p>
-                <a href="nyc_retail_plotly_map.html" class="nav-link">View Interactive Map</a>
+                <div class="map-categories">
+                    <span class="map-category">Featured</span>
+                    <span class="map-category">Recommendations</span>
+                </div>
+                <a href="featured_map.html" class="nav-link">View Map</a>
             </div>
             
-            <!-- Add more visualization cards as needed -->
+            <div class="visualization-card">
+                <h3 class="visualization-title">NYC Retail Analysis</h3>
+                <p class="visualization-description">
+                    Explore the interactive map showing existing Trader Joe's locations, other retail food stores, 
+                    and demographic metrics by ZIP code.
+                </p>
+                <div class="map-categories">
+                    <span class="map-category">Retail</span>
+                    <span class="map-category">Competition</span>
+                </div>
+                <a href="nyc_retail_plotly_map.html" class="nav-link">View Map</a>
+            </div>
+            
+            <div class="visualization-card">
+                <h3 class="visualization-title">Education Levels by ZIP Code</h3>
+                <p class="visualization-description">
+                    Visualizes educational attainment across NYC ZIP codes, a key demographic factor
+                    in Trader Joe's location strategy.
+                </p>
+                <div class="map-categories">
+                    <span class="map-category">Demographics</span>
+                    <span class="map-category">Education</span>
+                </div>
+                <a href="education_map.html" class="nav-link">View Map</a>
+            </div>
+            
+            <div class="visualization-card">
+                <h3 class="visualization-title">Income Distribution</h3>
+                <p class="visualization-description">
+                    Analysis of household income across NYC ZIP codes, showing correlation
+                    with existing Trader Joe's locations.
+                </p>
+                <div class="map-categories">
+                    <span class="map-category">Demographics</span>
+                    <span class="map-category">Income</span>
+                </div>
+                <a href="income_map.html" class="nav-link">View Map</a>
+            </div>
+            
+            <div class="visualization-card">
+                <h3 class="visualization-title">Grocery Store Density</h3>
+                <p class="visualization-description">
+                    Map showing the concentration of grocery stores by ZIP code to identify areas with
+                    less competition.
+                </p>
+                <div class="map-categories">
+                    <span class="map-category">Competition</span>
+                    <span class="map-category">Store Count</span>
+                </div>
+                <a href="store_count_map.html" class="nav-link">View Map</a>
+            </div>
+            
+            <div class="visualization-card">
+                <h3 class="visualization-title">NYC ZIP Code Overview</h3>
+                <p class="visualization-description">
+                    Basic map of NYC ZIP codes used as the foundation for our spatial analysis.
+                </p>
+                <div class="map-categories">
+                    <span class="map-category">Reference</span>
+                    <span class="map-category">ZIP Codes</span>
+                </div>
+                <a href="nyc_zip_code_map.html" class="nav-link">View Map</a>
+            </div>
+            
+            <div class="visualization-card">
+                <h3 class="visualization-title">Trader Joe's Recommendations</h3>
+                <p class="visualization-description">
+                    Final recommendations for new Trader Joe's locations based on our comprehensive analysis.
+                </p>
+                <div class="map-categories">
+                    <span class="map-category">Results</span>
+                    <span class="map-category">Recommendations</span>
+                </div>
+                <a href="trader_joes_recommendations.html" class="nav-link">View Map</a>
+            </div>
+            
+            <div class="visualization-card">
+                <h3 class="visualization-title">Current Trader Joe's Locations</h3>
+                <p class="visualization-description">
+                    Map showing only existing Trader Joe's locations throughout NYC to understand current coverage.
+                </p>
+                <div class="map-categories">
+                    <span class="map-category">Existing Stores</span>
+                    <span class="map-category">Coverage</span>
+                </div>
+                <a href="test_trader_joes_only.html" class="nav-link">View Map</a>
+            </div>
         </div>
     </div>
     
